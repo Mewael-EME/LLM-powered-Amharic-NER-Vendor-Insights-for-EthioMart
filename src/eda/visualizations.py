@@ -12,7 +12,7 @@ def create_key_insight_plots(df):
         province_avg.plot(kind='barh', color='steelblue')
         plt.title(' Average Loss Ratio by Province')
         plt.xlabel('Loss Ratio')
-        plt.savefig('task4/plots/insight_loss_ratio_by_province.png')
+        plt.savefig('plots/insight_loss_ratio_by_province.png')
         plt.close()
 
     # Insight 2: Claims by VehicleType and Gender
@@ -20,12 +20,12 @@ def create_key_insight_plots(df):
         plt.figure(figsize=(8, 5))
         sns.boxplot(data=df, x='VehicleType', y='TotalClaim', hue='Gender')
         plt.title(' Claim Distribution by VehicleType and Gender')
-        plt.savefig('task4/plots/insight_claim_by_vehicle_gender.png')
+        plt.savefig('plots/insight_claim_by_vehicle_gender.png')
         plt.close()
 
     # Insight 3: Claim trend over time
     if 'Month' in df.columns:
         monthly = df.groupby('Month')[['TotalClaim', 'TotalPremium']].sum()
         monthly.plot(figsize=(10, 5), title=' Monthly Claims vs Premiums')
-        plt.savefig('task4/plots/insight_claims_over_time.png')
+        plt.savefig('plots/insight_claims_over_time.png')
         plt.close()

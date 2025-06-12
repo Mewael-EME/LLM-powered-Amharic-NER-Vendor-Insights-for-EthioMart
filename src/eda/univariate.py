@@ -12,7 +12,7 @@ def plot_distributions(df):
         plt.figure(figsize=(6, 4))
         sns.histplot(df[col], kde=True)
         plt.title(f'Distribution of {col}')
-        plt.savefig(f'task4/plots/hist_{col}.png')
+        plt.savefig(f'plots/hist_{col}.png')
         plt.close()
 
     print("\n Plotting Bar Charts for Categorical Columns")
@@ -21,5 +21,5 @@ def plot_distributions(df):
             plt.figure(figsize=(6, 4))
             df[col].value_counts().plot(kind='bar')
             plt.title(f'Frequency of {col}')
-            plt.savefig(f'task4/plots/bar_{col}.png')
+            plt.savefig(f'plots/bar_{col}.png')
             plt.close()

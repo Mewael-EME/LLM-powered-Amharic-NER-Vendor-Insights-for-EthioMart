@@ -1,11 +1,11 @@
 # src/eda/missing_values.py
+import pandas as pd
 
 def check_missing(df):
-    print("\n Missing Values Report:")
-    missing = df.isnull().sum()
-    missing_percent = (missing / len(df)) * 100
     missing_report = pd.DataFrame({
-        'Missing Values': missing,
-        'Percent': missing_percent
+        'Column': df.columns,
+        'MissingCount': df.isnull().sum(),
+        'MissingPercent': (df.isnull().sum() / len(df)) * 100
     })
-    print(missing_report[missing_report['Missing Values'] > 0])
+    print("Missing Values Report:")
+    print(missing_report)

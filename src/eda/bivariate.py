@@ -9,7 +9,7 @@ def plot_relationships(df):
     plt.figure(figsize=(10, 8))
     sns.heatmap(corr, annot=True, cmap='coolwarm')
     plt.title("Correlation Matrix")
-    plt.savefig('task4/plots/correlation_matrix.png')
+    plt.savefig('plots/correlation_matrix.png')
     plt.close()
 
     if 'TotalPremium' in df.columns and 'TotalClaim' in df.columns:
@@ -17,5 +17,5 @@ def plot_relationships(df):
         plt.figure(figsize=(6, 4))
         sns.scatterplot(data=df, x='TotalPremium', y='TotalClaim', hue='ZipCode', legend=False)
         plt.title('TotalPremium vs TotalClaim by ZipCode')
-        plt.savefig('task4/plots/premium_vs_claim.png')
+        plt.savefig('plots/premium_vs_claim.png')
         plt.close()

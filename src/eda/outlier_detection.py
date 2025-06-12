@@ -11,5 +11,5 @@ def detect_outliers(df):
         plt.figure(figsize=(6, 4))
         sns.boxplot(x=df[col])
         plt.title(f'Boxplot of {col}')
-        plt.savefig(f'task4/plots/box_{col}.png')
+        plt.savefig(f'plots/box_{col}.png')
         plt.close()
