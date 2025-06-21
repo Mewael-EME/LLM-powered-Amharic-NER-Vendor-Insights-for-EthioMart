@@ -87,3 +87,33 @@ pip install -r requirements.txt
 👨‍💻 Author
 
 Mewael Mizan Tesfay
+=======
+# EthioMart E-commerce LLM - Task 1: Data Ingestion & Preprocessing
+
+This project collects and cleans Telegram messages from Ethiopian e-commerce channels in Amharic language.
+
+## Setup
+
+1. Install dependencies:
+
+pip install -r requirements.txt
+2. Copy `.env.template` to `.env` and fill in your Telegram API credentials.
+
+3. Run the ingestion pipeline:
+
+
+python main.py
+
+## Folder Structure
+
+- `src/` - Core scripts (Telegram client, data cleaning)
+- `data/` - Raw and processed message data
+- `images/` - Downloaded media files
+- `notebooks/` - Exploration and testing notebooks
+- `tests/` - Unit tests for core modules
+
+## Next Steps
+
+- Task 2: Label data for NER
+- Task 3: Fine-tune NER model
+
